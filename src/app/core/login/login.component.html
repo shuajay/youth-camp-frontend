@@ -1,0 +1,34 @@
+<!-- login.component.html -->
+<!-- login.component.html -->
+<div class="login-container">
+  <p-card header="Login" styleClass="p-card-login">
+    <div class="p-field">
+      <label for="email">Email</label>
+      <input
+        id="email"
+        type="email"
+        pInputText
+        [(ngModel)]="credentials.email"
+        placeholder="Enter your email">
+    </div>
+
+    <div class="p-field">
+      <label for="password">Password</label>
+      <input
+        id="password"
+        type="password"
+        pInputText
+        [(ngModel)]="credentials.password"
+        placeholder="Enter your password">
+    </div>
+
+    <button
+      pButton
+      type="button"
+      label="Login"
+      class="p-button-primary"
+      (click)="login()"></button>
+  </p-card>
+</div>
+
+<p-toast></p-toast>

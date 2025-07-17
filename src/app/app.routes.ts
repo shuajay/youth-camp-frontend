@@ -1,3 +1,21 @@
 import { Routes } from '@angular/router';
+import {LoginComponent} from './core/login/login.component';
+import {authGuard} from './core/guards/auth.guard';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'dashboard',
+    loadComponent: () => import('./core/dashboard/dashboard.component')
+      .then(m =>  m.DashboardComponent),
+    canActivate: [authGuard]
+  },
+  {
+    path: '',
+    redirectTo: '/dashboard',
+    pathMatch: 'full'
+  }
+];
