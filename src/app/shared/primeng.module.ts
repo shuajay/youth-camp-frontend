@@ -19,4 +19,4 @@ import { CardModule } from "primeng/card";
     CardModule
   ]
 })
-export class PrimeModule { }
+export class PrimengModule { }
