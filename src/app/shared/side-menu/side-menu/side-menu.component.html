@@ -1,1 +1,6 @@
-<p>side-menu works!</p>
+<ul>
+    <li *ngFor="let item of menuItems">
+        <a>{{ item.label }}</a>
+        <!-- <a [routerLink]="item.route">{{ item.label }}</a> -->
+    </li>
+</ul>
